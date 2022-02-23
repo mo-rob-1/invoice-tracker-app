@@ -1,0 +1,11 @@
+{
+  "name": "invoice-tracker-app",
+  "version": "1.0.0",
+  "description": "Invoice Tracker App",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "author": "Mo",
+  "license": "ISC"
+}
