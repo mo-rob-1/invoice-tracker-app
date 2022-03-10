@@ -48,7 +48,8 @@ const invoiceSchema = mongoose.Schema(
       // required: [true, "Client's country is required"],
     },
     invoiceDate: {
-      type: Date,
+      type: String,
+      // type: Date,
       // required: [true, "Invoice date is required"],
     },
     paymentTerms: {
