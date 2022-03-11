@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { getInvoice, reset } from "../features/invoices/invoiceSlice";
-import { useParams } from "react-router-dom";
+import { getInvoice, reset, updateInvoice } from "../features/invoices/invoiceSlice";
+import { useParams, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import BackButton from "../components/BackButton";
 import { FaTicketAlt } from "react-icons/fa";
@@ -10,6 +10,7 @@ function Invoice() {
   const { invoice, isLoading, isSuccess, isError, message } = useSelector((state) => state.invoice);
 
   const params = useParams();
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const { invoiceId } = useParams();
 
@@ -21,6 +22,13 @@ function Invoice() {
     dispatch(getInvoice(invoiceId));
     // eslint-disable-next-line
   }, [isError, message, invoiceId]);
+
+  // Invoice Paid
+  const onInvoicePaid = () => {
+    dispatch(updateInvoice(invoiceId));
+    toast.success("Invoice Paid");
+    navigate("/invoices");
+  };
 
   if (isLoading) {
     return <h3>Loading...</h3>;
@@ -43,6 +51,11 @@ function Invoice() {
           <p>{invoice.description}</p>
         </div>
       </header>
+      {invoice.status !== "pending" && (
+        <button onClick={onInvoicePaid} className="btn btn-block btn-danger">
+          Mark Invoice As Paid
+        </button>
+      )}
     </div>
   );
 }
