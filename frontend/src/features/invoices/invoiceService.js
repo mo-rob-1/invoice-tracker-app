@@ -41,10 +41,24 @@ const getInvoice = async (invoiceId, token) => {
   return response.data;
 };
 
+// Update Invoice status
+const updateInvoice = async (invoiceId, token) => {
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
+
+  const response = await axios.put(API_URL + invoiceId, { status: "Paid" }, config);
+
+  return response.data;
+};
+
 const invoiceService = {
   createInvoice,
   getInvoices,
   getInvoice,
+  updateInvoice,
 };
 
 export default invoiceService;
