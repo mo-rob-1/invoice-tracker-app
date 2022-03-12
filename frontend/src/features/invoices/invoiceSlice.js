@@ -49,6 +49,19 @@ export const getInvoice = createAsyncThunk("invoices/get", async (invoiceId, thu
   }
 });
 
+// Update invoice status
+export const updateInvoice = createAsyncThunk("invoices/update", async (invoiceId, thunkAPI) => {
+  try {
+    const token = thunkAPI.getState().auth.user.token;
+    return await invoiceService.updateInvoice(invoiceId, token);
+  } catch (error) {
+    const message =
+      (error.response && error.response.data && error.response.data.message) || error.message || error.toString();
+
+    return thunkAPI.rejectWithValue(message);
+  }
+});
+
 export const invoiceSlice = createSlice({
   name: "invoice",
   initialState,
@@ -94,6 +107,10 @@ export const invoiceSlice = createSlice({
         state.isLoading = false;
         state.isError = true;
         state.message = action.payload;
+      })
+      .addCase(updateInvoice.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.invoices.map((invoice) => (invoice._id === action.payload._id ? (invoice.status = "Paid") : invoice));
       });
   },
 });
