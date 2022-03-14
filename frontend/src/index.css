@@ -1,7 +1,3 @@
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
 
 * {
@@ -189,6 +185,14 @@ h3 {
   transform: scale(0.98);
 }
 
+.form h3 {
+  margin-top: 40px;
+}
+
+.tickets {
+  margin-top: 1.4rem;
+}
+
 .ticket-created {
   border: 1px solid #e6e6e6;
   border-radius: 5px;
@@ -280,7 +284,7 @@ h3 {
 }
 
 .ticket-desc {
-  margin: 20px 0;
+  margin: 40px 0;
   font-size: 17px;
   background-color: #f4f4f4;
   border: 1px #ccc solid;
@@ -381,6 +385,27 @@ footer {
   animation: spin 1.2s linear infinite;
 }
 
+.height {
+  height: 40px;
+}
+
+.ticket-desc-item {
+  margin-bottom: 1.5rem;
+}
+
+.user-address {
+  margin-bottom: 2rem;
+}
+
+.billing-address {
+  margin-bottom: 2rem;
+}
+
+.invoice-info-item-one {
+  display: grid;
+  gap: 16px;
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -406,5 +431,33 @@ footer {
 
   .heading p {
     font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .invoice-address-wrapper {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  .ticket-desc {
+    display: grid;
+    gap: 2.3rem;
+    padding: 2rem;
+    margin: 20px 0;
+  }
+  .ticket-desc-wrapper-one {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+  }
+  .ticket-desc-wrapper-two {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+  }
+  .invoice-info-wrapper {
+    display: flex;
+    justify-content: space-between;
   }
 }
