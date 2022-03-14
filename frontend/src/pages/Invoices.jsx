@@ -34,7 +34,7 @@ function Invoices() {
           <div>Date</div>
           <div>Item Name</div>
           <div>Status</div>
-          <div></div>
+          <div>Invoice Details</div>
         </div>
         {invoices.map((invoice) => (
           <InvoiceItem key={invoice._id} invoice={invoice} />
