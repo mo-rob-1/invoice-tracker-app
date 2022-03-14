@@ -42,20 +42,74 @@ function Invoice() {
     <div className="ticket-page">
       <header className="ticket-header">
         <BackButton url="/invoices" />
-        <h2>Invoice ID: {invoice._id}</h2>
-        <span>{invoice.status}</span>
-        <h3>Date Submitted: {new Date(invoice.createdAt).toLocaleString("en-gb")}</h3>
-        <hr />
-        <div className="ticket-desc">
-          <h3>Description</h3>
-          <p>{invoice.description}</p>
-        </div>
       </header>
-      {invoice.status !== "pending" && (
-        <button onClick={onInvoicePaid} className="btn btn-block btn-danger">
-          Mark Invoice As Paid
-        </button>
-      )}
+      <div className="invoice-info-wrapper">
+        <div className="invoice-info-item-one">
+          <span>
+            <strong>Invoice Date:</strong> {new Date(invoice.createdAt).toLocaleString("en-gb")}
+          </span>
+          <span>
+            <strong>Invoice ID:</strong> #{invoice._id}
+          </span>
+          <span>
+            <strong>Status:</strong> {invoice.status}
+          </span>
+        </div>
+        <div className="invoice-info-item-two">
+          {invoice.status !== "pending" && (
+            <button onClick={onInvoicePaid} className="btn btn-block btn-danger">
+              Mark As Paid
+            </button>
+          )}
+        </div>
+      </div>
+      <div className="invoice-address-wrapper">
+        <div className="user-address">
+          <p>{invoice.userAddress}</p>
+          <p>{invoice.userCity}</p>
+          <p>{invoice.userPostCode}</p>
+          <p>{invoice.userCountry}</p>
+        </div>
+        <div className="billing-address">
+          <h3>Bill To:</h3>
+          <p>{invoice.clientName}</p>
+          <p>{invoice.clientAddress}</p>
+          <p>{invoice.clientCity}</p>
+          <p>{invoice.clientPostCode}</p>
+          <p>{invoice.clientCountry}</p>
+        </div>
+        <div>
+          <h3>Sent To:</h3>
+          <p>{invoice.clientEmail}</p>
+        </div>
+      </div>
+      <div className="ticket-desc">
+        <div className="ticket-desc-wrapper-one">
+          <div className="ticket-desc-item">
+            <h3>Item Name:</h3>
+            <p>{invoice.itemName}</p>
+          </div>
+          <div className="ticket-desc-item">
+            <h3>Description:</h3>
+            <p>{invoice.description}</p>
+          </div>
+        </div>
+        <div className="ticket-desc-wrapper-two">
+          <div className="ticket-desc-item">
+            <h3>Quantity:</h3>
+            <p>{invoice.quantity}</p>
+          </div>
+          <div className="ticket-desc-item">
+            <h3>Payment Terms:</h3>
+            <p>{invoice.paymentTerms}</p>
+          </div>
+          <div className="ticket-desc-item">
+            <h3>Total:</h3>
+            <p>£{invoice.price}</p>
+          </div>
+        </div>
+      </div>
+      <div className="height"></div>
     </div>
   );
 }
