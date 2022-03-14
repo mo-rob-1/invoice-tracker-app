@@ -4,7 +4,7 @@ function Home() {
   return (
     <>
       <section className="heading">
-        <h1>Track your Invoices</h1>
+        <h1>Track Your Invoices</h1>
         <p>Please choose from an option below</p>
       </section>
 
