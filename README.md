@@ -17,6 +17,6 @@ Link: [Invoice Tracker App](https://invoice-tracker-app-mocodes.herokuapp.com/)
 
 ## Author
 
-Created by Mo.
+Coded by Mo.
 
 Portfolio: [mocodes](https://mocodes.co.uk/)
