@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Register renders the register page 1`] = `
+<DocumentFragment>
+  <section
+    class="heading"
+  >
+    <h1>
+      Register
+    </h1>
+    <p>
+      Please create an account
+    </p>
+  </section>
+  <section
+    class="form"
+  >
+    <form>
+      <div
+        class="form-group"
+      >
+        <input
+          class="form-control"
+          data-testid="name-input"
+          id="name"
+          name="name"
+          placeholder="Enter your name"
+          required=""
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        class="form-group"
+      >
+        <input
+          class="form-control"
+          data-testid="email-input"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          required=""
+          type="email"
+          value=""
+        />
+      </div>
+      <div
+        class="form-group"
+      >
+        <input
+          class="form-control"
+          data-testid="password-input"
+          id="password"
+          name="password"
+          placeholder="Enter password"
+          required=""
+          type="password"
+          value=""
+        />
+      </div>
+      <div
+        class="form-group"
+      >
+        <input
+          class="form-control"
+          data-testid="confirm-password-input"
+          id="password2"
+          name="password2"
+          placeholder="Confirm password"
+          required=""
+          type="password"
+          value=""
+        />
+      </div>
+      <div
+        class="form-group"
+      >
+        <button
+          class="btn btn-block"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  </section>
+</DocumentFragment>
+`;

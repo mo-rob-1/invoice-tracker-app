@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders home page 1`] = `
+<DocumentFragment>
+  <section
+    class="heading"
+  >
+    <h1>
+      Track Your Invoices
+    </h1>
+    <p>
+      Please choose from an option below
+    </p>
+  </section>
+  <a
+    class="btn btn-reverse btn-block"
+    data-testid="new-invoice-link"
+    href="/new-invoice"
+  >
+    Create New Invoice
+  </a>
+  <a
+    class="btn  btn-block"
+    data-testid="view-invoices-link"
+    href="/invoices"
+  >
+    View My Invoices
+  </a>
+</DocumentFragment>
+`;
