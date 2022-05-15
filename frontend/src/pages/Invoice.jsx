@@ -1,15 +1,13 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { getInvoice, reset, updateInvoice } from "../features/invoices/invoiceSlice";
+import { getInvoice, updateInvoice } from "../features/invoices/invoiceSlice";
 import { useParams, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import BackButton from "../components/BackButton";
-import { FaTicketAlt } from "react-icons/fa";
 
 function Invoice() {
-  const { invoice, isLoading, isSuccess, isError, message } = useSelector((state) => state.invoice);
+  const { invoice, isLoading, isError, message } = useSelector((state) => state.invoice);
 
-  const params = useParams();
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { invoiceId } = useParams();

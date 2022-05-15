@@ -8,11 +8,11 @@ function Home() {
         <p>Please choose from an option below</p>
       </section>
 
-      <Link to="/new-invoice" className="btn btn-reverse btn-block">
+      <Link to="/new-invoice" className="btn btn-reverse btn-block" data-testid="new-invoice-link">
         Create New Invoice
       </Link>
 
-      <Link to="/invoices" className="btn  btn-block">
+      <Link to="/invoices" className="btn  btn-block" data-testid="view-invoices-link">
         View My Invoices
       </Link>
     </>

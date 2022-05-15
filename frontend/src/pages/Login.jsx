@@ -70,6 +70,7 @@ function Login() {
               className="form-control"
               id="email"
               name="email"
+              data-testid="email-input"
               value={email}
               onChange={onChange}
               placeholder="Enter your email"
@@ -80,6 +81,7 @@ function Login() {
           <div className="form-group">
             <input
               type="password"
+              data-testid="password-input"
               className="form-control"
               id="password"
               name="password"

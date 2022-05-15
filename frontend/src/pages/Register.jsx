@@ -72,6 +72,7 @@ function Register() {
               type="text"
               className="form-control"
               id="name"
+              data-testid="name-input"
               value={name}
               name="name"
               onChange={onChange}
@@ -85,6 +86,7 @@ function Register() {
               type="email"
               className="form-control"
               id="email"
+              data-testid="email-input"
               value={email}
               name="email"
               onChange={onChange}
@@ -98,6 +100,7 @@ function Register() {
               type="password"
               className="form-control"
               id="password"
+              data-testid="password-input"
               value={password}
               name="password"
               onChange={onChange}
@@ -110,6 +113,7 @@ function Register() {
             <input
               type="password"
               className="form-control"
+              data-testid="confirm-password-input"
               id="password2"
               value={password2}
               name="password2"
