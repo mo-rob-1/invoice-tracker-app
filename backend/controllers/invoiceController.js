@@ -14,6 +14,7 @@ const getInvoices = asyncHandler(async (req, res) => {
   const invoices = await Invoice.find({
     user: req.user.id,
   });
+
   res.status(200).json(invoices);
 });
 // @desc  Get user invoice

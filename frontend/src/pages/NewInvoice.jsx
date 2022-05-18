@@ -7,7 +7,7 @@ import BackButton from "../components/BackButton";
 
 function NewInvoice() {
   const { user } = useSelector((state) => state.auth);
-  const { isLoading, isError, isSuccess, message } = useSelector((state) => state.invoice);
+  const { isLoading, isError, isSuccess, message } = useSelector((state) => state.invoices);
 
   const [name] = useState(user?.name);
   const [email] = useState(user?.email);

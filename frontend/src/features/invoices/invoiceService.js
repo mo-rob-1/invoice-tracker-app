@@ -2,7 +2,7 @@ import axios from "axios";
 
 const API_URL = "/api/invoices/";
 
-// Create a new ticket
+// Create new invoice
 const createInvoice = async (invoiceData, token) => {
   const config = {
     headers: {
@@ -15,7 +15,7 @@ const createInvoice = async (invoiceData, token) => {
   return response.data;
 };
 
-// Fetch invoices from database
+// Get user invoices
 const getInvoices = async (token) => {
   const config = {
     headers: {
@@ -28,7 +28,7 @@ const getInvoices = async (token) => {
   return response.data;
 };
 
-// Fetch invoice from database
+// Get user invoice
 const getInvoice = async (invoiceId, token) => {
   const config = {
     headers: {

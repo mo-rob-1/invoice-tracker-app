@@ -23,7 +23,7 @@ export const createInvoice = createAsyncThunk("invoices/create", async (invoiceD
   }
 });
 
-// Fetch invoices from database
+// Get user invoices
 export const getInvoices = createAsyncThunk("invoices/getAll", async (_, thunkAPI) => {
   try {
     const token = thunkAPI.getState().auth.user.token;
@@ -36,7 +36,7 @@ export const getInvoices = createAsyncThunk("invoices/getAll", async (_, thunkAP
   }
 });
 
-// Fetch invoice from database
+// Get user invoice
 export const getInvoice = createAsyncThunk("invoices/get", async (invoiceId, thunkAPI) => {
   try {
     const token = thunkAPI.getState().auth.user.token;

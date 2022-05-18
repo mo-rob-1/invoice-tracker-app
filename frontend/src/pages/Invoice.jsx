@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 import BackButton from "../components/BackButton";
 
 function Invoice() {
-  const { invoice, isLoading, isError, message } = useSelector((state) => state.invoice);
+  const { invoice, isLoading, isError, message } = useSelector((state) => state.invoices);
 
   const navigate = useNavigate();
   const dispatch = useDispatch();

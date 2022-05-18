@@ -1,11 +1,11 @@
 import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { getInvoices, reset } from "../features/invoices/invoiceSlice";
 import BackButton from "../components/BackButton";
 import InvoiceItem from "../components/InvoiceItem";
 
 function Invoices() {
-  const { invoices, isLoading, isSuccess } = useSelector((state) => state.invoice);
+  const { invoices, isLoading, isSuccess } = useSelector((state) => state.invoices);
 
   const dispatch = useDispatch();
 
@@ -15,7 +15,7 @@ function Invoices() {
         dispatch(reset());
       }
     };
-  }, [isSuccess, dispatch]);
+  }, [dispatch, isSuccess]);
 
   useEffect(() => {
     dispatch(getInvoices());
@@ -32,9 +32,9 @@ function Invoices() {
       <div className="tickets">
         <div className="ticket-headings">
           <div>Date</div>
-          <div>Item Name</div>
+          <div>Product</div>
           <div>Status</div>
-          <div>Invoice Details</div>
+          <div></div>
         </div>
         {invoices.map((invoice) => (
           <InvoiceItem key={invoice._id} invoice={invoice} />
