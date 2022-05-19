@@ -1,22 +1,45 @@
 # Invoice Tracker App
 
-#### Created using the MERN stack and deployed to Heroku.
-
 This app enables users to create, track and manage their invoices by logging in or creating an account. User account details and invoices are stored in a database using MongoDB. Express was used to build the backend and React along with Redux was used to develop the frontend functionality for user authentication and invoice management.
 
-Link: [Invoice Tracker App](https://invoice-tracker-app-mocodes.herokuapp.com/)
+Users can:
+
+- Track and manage their invoices by logging in or creating an account.
+- Create an invoice
+- View all invoices
+- Update the payment status of an invoice
+
+## Table of contents
+
+- [Demo](#demo)
+- [Technologies](#technologies)
+- [Languages](#languages)
+- [Contact](#contact)
+
+## Demo
+
+![GIF showing the Invoice Tracker App](frontend/src/assets/invoice-tracker-app.gif)
 
 ## Technologies
 
 - React
+- React Hooks, React Router, React Testing Library
 - Redux
-- MongoDB
-- Node
-- Express
+- CSS
 - Axios
+- MongoDB
+- Node.js and NPM
+- Express
+- Postman
+- Git & GitHub
+- Visual Studio Code (IDE)
 
-## Author
+## Languages
 
-Coded by Mo.
+- JavaScript
 
-Portfolio: [mocodes](https://mocodes.co.uk/)
+## Contact
+
+Coded by Mo - [mocodes](https://mocodes.co.uk/)
+
+Twitter: [@mocodes\_](https://twitter.com/mocodes_)
